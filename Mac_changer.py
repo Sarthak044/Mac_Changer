@@ -2,7 +2,7 @@ import subprocess
 import optparse
 import re
 
-def get_arguments():
+def get_args():
     parser = optparse.OptionParser()
     parser.add_option("-i", "--interface", dest="interface", help="Interface to change it's MAC address")
     parser.add_option("-m", "--mac", dest="new_mac", help="MAC Address you want to change to")
@@ -29,7 +29,7 @@ def get_current_mac(interface):
         print("[-]COULD NOT READ MAC ADDRESS")
         
 #arguments variable is not really used but we need it to store the value
-options=get_arguments()
+options=get_args()
 cur_mac = get_current_mac(options.interface)
 
 print("Current mac is " + str (cur_mac))
