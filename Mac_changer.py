@@ -1,6 +1,10 @@
 import subprocess
 import optparse
 import re
+import pyfiglet
+
+ascii_banner = pyfiglet.figlet_format("ProGod04")
+print(ascii_banner)
 
 def get_args():
     parser = optparse.OptionParser()
